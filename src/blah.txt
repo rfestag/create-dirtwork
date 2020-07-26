@@ -1,0 +1,5 @@
+1. Determine if we are in a project (determined by existence of workspace)
+2. Prompt for project name
+3. If we are, determine root where project will go. Otherwise, assume current directory. User confirms
+4. Create directory, cd into directory
+5. 
