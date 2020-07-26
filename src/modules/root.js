@@ -12,11 +12,9 @@ exports.questions = ({name}) => [
   }
 ]
 exports.devDependencies = () => [
-  "@babel/cli",
   "@babel/core",
   "@babel/plugin-proposal-export-default-from",
   "@babel/plugin-syntax-dynamic-import",
-  "@babel/plugin-transform-modules-commonjs",
   "@babel/plugin-transform-runtime",
   "@babel/preset-env",
   "@babel/preset-react",
@@ -27,13 +25,12 @@ exports.devDependencies = () => [
   "cross-env",
   "eslint",
   "eslint-config-prettier",
-  "eslint-plugin-import",
-  "eslint-plugin-react",
   "eslint-plugin-markdown",
   "husky",
   "jest",
   "lint-staged",
   "prettier",
+  //react-app ESLint dependencies
   "eslint-config-react-app",
   "@typescript-eslint/eslint-plugin@2.x",
   "@typescript-eslint/parser@2.x",
@@ -44,6 +41,12 @@ exports.devDependencies = () => [
   "eslint-plugin-jsx-a11y@6.x",
   "eslint-plugin-react@7.x",
   "eslint-plugin-react-hooks@2.x",
+  //Rollup build
+  "rollup",
+  "@rollup/plugin-babel",
+  "@rollup/plugin-commonjs",
+  "@rollup/plugin-node-resolve",
+  "rollup-plugin-peer-deps-external",
 ]
 
 exports.packageJson = () => ({

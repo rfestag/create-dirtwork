@@ -14,7 +14,7 @@ const configure = async (argv, modules) => {
   }, argv)
 }
 const installType = (modules, type, workspace) => {
-  const dev = type === 'devDependencies'
+  const dev = type !== 'dependencies'
   const packages = modules.reduce((packages, m) => {
     return m[type] ? packages.concat(m[type]()) : packages
   }, [])
@@ -26,9 +26,11 @@ const render = (src, dst, data) => {
     fs.writeFileSync(dst, str)
   })
 }
-exports.install = (modules, workspace=false) => installType(modules, 'dependencies', workspace)
-exports.installDev = (modules, workspace=false) => installType(modules, 'devDependencies', workspace)
-exports.installPeer = (modules, workspace=false) => installType(modules, 'peerDependencies', workspace)
+exports.install = (modules, workspace=false) => {
+  for (type of ['devDependencies', 'dependencies']) {
+    installType(modules, type, workspace)
+  }
+}
 exports.createDirs = (modules) => modules.forEach(m => m.dirs && m.dirs().forEach(d => sh.mkdir('-p', d)))
 exports.renderTemplates = (modules, args) => {
   modules.forEach(m => {
@@ -45,7 +47,14 @@ exports.combinePackageJson = (modules) => {
   const packageJson = JSON.parse(fs.readFileSync('package.json'))
   return modules.reduce((packageJson, m) => {
     const updates = m.packageJson()
-    return updates ? merge(packageJson, updates) : packageJson
+    const newPackageJson = updates ? merge(packageJson, updates) : packageJson
+    const peers = m.peerDependencies ? m.peerDependencies() : []
+    return peers.reduce((packageJson, p) => {
+      packageJson.peerDependencies = packageJson.peerDependencies || {}
+      packageJson.peerDependencies[p] = packageJson.devDependencies[p]
+      return packageJson
+    }, newPackageJson)
+    return newPackageJson
   }, packageJson)
 }
 exports.configure = async (argv, origModules) => {

@@ -4,6 +4,7 @@ exports.dirs = () => [
   'src/public',
 ]
 exports.dependencies = () => [
+  'fontsource-roboto',
   '@material-ui/core',
   '@material-ui/icons',
   '@material-ui/lab',
@@ -15,6 +16,7 @@ exports.templates = () => ({
   'src/pages/_document.js': `${__dirname}/app/_document.js`,
   'src/pages/_app.js': `${__dirname}/app/_app.js`,
   'src/pages/index.js': `${__dirname}/app/index.js`,
+  'src/theme.js': `${__dirname}/app/theme.js`,
 })
 exports.packageJson = () => ({
   private: true,

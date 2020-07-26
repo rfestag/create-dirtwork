@@ -1,14 +1,14 @@
 const { combinePackageJson, configure, createDirs, install, renderTemplates } = require('../common')
-const pkg = require('../modules/package')
+const component = require('../modules/component')
 const sh = require('shelljs');
 const chalk = require('chalk');
 const fs = require('fs');
 
-exports.command = 'package [name]'
-exports.desc = 'Create a new package'
+exports.command = 'component [name]'
+exports.desc = 'Create a new React component'
 exports.builder = {}
 exports.handler = async function (argv) {
-  const {name, scope, isRoot, rootDir, modules} = await configure(argv, [pkg])
+  const {name, scope, isRoot, rootDir, modules} = await configure(argv, [component])
   const path =  isRoot ? name : `${rootDir}/packages/${name}`
   console.log("Using", path)
   sh.mkdir('-p', path)

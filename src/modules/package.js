@@ -2,6 +2,7 @@ exports.dirs = () => [
   'src',
 ]
 exports.packageJson = () => ({
+  main: 'lib/index.js',
   scripts: {
     build: "babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",
     dev: "babel -w --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",

@@ -1,8 +1,7 @@
 {
-  "presets": ["env", "react"],
+  "presets": ["@babel/env", "@babel/preset-react"],
   "plugins": [
     "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-transform-modules-commonjs",
     "@babel/plugin-transform-runtime",
     "@babel/plugin-proposal-export-default-from"
   ]

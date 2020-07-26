@@ -1,4 +1,4 @@
-const { combinePackageJson, configure, createDirs, installDev, renderTemplates } = require('../common')
+const { combinePackageJson, configure, createDirs, install, renderTemplates } = require('../common')
 const workspace = require('../modules/workspace')
 const sh = require('shelljs');
 const chalk = require('chalk');
@@ -20,7 +20,7 @@ exports.handler = async function (argv) {
   createDirs(modules)
   renderTemplates(modules)
   console.log(chalk.green('Installing dependencies...'))
-  installDev(modules, true)
+  install(modules, true)
   console.log(chalk.green('Finalizing configuration...'))
   const packageJson = combinePackageJson(modules)
   fs.writeFileSync('package.json', JSON.stringify(packageJson, null, '  '))
