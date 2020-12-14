@@ -18,7 +18,10 @@ const installType = (modules, type, workspace) => {
   const packages = modules.reduce((packages, m) => {
     return m[type] ? packages.concat(m[type]()) : packages
   }, [])
-  sh.exec(`pnpm add ${dev ? '-D' : ''} ${workspace ? '-W' : ''} ${packages.join(' ')}`, {silent: true})
+  console.log(packages)
+  const cmd = `pnpm add ${dev ? '-D' : ''} ${workspace ? '-W' : ''} ${packages.join(' ')}`
+  console.log(cmd)
+  sh.exec(cmd, {silent: false})
 }
 const render = (src, dst, data) => {
   ejs.renderFile(src, data, {}, (err, str) => {

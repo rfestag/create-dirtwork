@@ -2,7 +2,7 @@ exports.dirs = () => [
   'src',
 ]
 exports.dependencies = () => [
-  'prop-types@^15.7.7',
+  'prop-types@^15.7.2',
 ]
 exports.peerDependencies = () => [
   'react',
@@ -10,8 +10,8 @@ exports.peerDependencies = () => [
   'prop-types',
 ]
 exports.devDependencies = () => [
-  'react@^16.8.0',
-  'react-dom@^16.8.0',
+  'react',
+  'react-dom',
 ]
 exports.templates = () => ({
   'src/index.js': `${__dirname}/component/index.js`,

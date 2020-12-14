@@ -2,6 +2,7 @@ exports.templates = () => ({
   "babel.config.json": `${__dirname}/root/babel.config.json`,
   ".eslintrc.yaml": `${__dirname}/root/eslintrc.yaml`,
   ".gitignore": `${__dirname}/root/gitignore`,
+  "pnpmfile.js": `${__dirname}/root/pnpmfile.js`,
 })
 exports.questions = ({name}) => [
   {
@@ -30,6 +31,8 @@ exports.devDependencies = () => [
   "jest",
   "lint-staged",
   "prettier",
+  "react",
+  "react-dom",
   //react-app ESLint dependencies
   "eslint-config-react-app",
   "@typescript-eslint/eslint-plugin@2.x",

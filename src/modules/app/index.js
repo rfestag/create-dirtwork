@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+//import { MyComponent } from "@Test/my-component"
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <main>
         <h1>Test</h1>
         <p>Welcome to Next App</p>
+        {/*<MyComponent />*/}
       </main>
     </>
   )
