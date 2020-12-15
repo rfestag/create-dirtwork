@@ -36,10 +36,14 @@ exports.packageJson = () => ({
     browser: "./dist/index.umd.js",
   },
   'lint-staged': {
-    "src/**/*.{js,jsx,md,mdx}": [
+    "src/**/*.{js,jsx}": [
       "eslint --fix",
       "prettier --write",
       "cross-env NODE_ENV=test jest --bail --findRelatedTests"
+    ],
+    "src/**/*.{md,mdx}": [
+      "eslint --parser eslint-mdx --plugin mdx --fix",
+      "prettier --parser mdx --write",
     ]
   }
 })

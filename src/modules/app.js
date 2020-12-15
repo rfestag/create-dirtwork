@@ -43,10 +43,14 @@ exports.packageJson = () => ({
     main: 'lib/index.js',
   },
   'lint-staged': {
-    "src/**/*.{js,jsx,mdx,mdx}": [
+    "src/**/*.{js,jsx}": [
       "eslint --fix",
       "prettier --write",
       "cross-env NODE_ENV=test jest --bail --findRelatedTests"
+    ],
+    "src/**/*.{md,mdx}": [
+      "eslint --parser eslint-mdx --plugin mdx --fix",
+      "prettier --parser mdx --write",
     ]
   }
 })

@@ -30,7 +30,6 @@ exports.devDependencies = () => [
   "eslint-plugin-mdx",
   "husky",
   "jest",
-  "jest-dom",
   "lint-staged",
   "prettier",
   "react",
