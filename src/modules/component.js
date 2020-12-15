@@ -16,6 +16,7 @@ exports.devDependencies = () => [
 exports.templates = () => ({
   'src/index.js': `${__dirname}/component/index.js`,
   'rollup.config.js': `${__dirname}/component/rollup.config.js`,
+  ".eslintrc.yaml": `${__dirname}/app/eslintrc.yaml`,
 })
 exports.packageJson = () => ({
   main: "./dist/index.js",

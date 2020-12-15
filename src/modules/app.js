@@ -25,6 +25,7 @@ exports.templates = () => ({
   'src/theme.js': `${__dirname}/app/theme.js`,
   'src/layouts/index.js': `${__dirname}/app/layout.jsx`,
   'next.config.js': `${__dirname}/app/next.config.js`,
+  ".eslintrc.yaml": `${__dirname}/app/eslintrc.yaml`,
 })
 exports.packageJson = () => ({
   private: true,
@@ -48,7 +49,7 @@ exports.packageJson = () => ({
       "cross-env NODE_ENV=test jest --bail --findRelatedTests"
     ],
     'src/**/*.{md,mdx}': [
-      "eslint --plugin markdown --fix"
+      "eslint --plugin mdx --fix"
     ]
   }
 })

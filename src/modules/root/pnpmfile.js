@@ -8,8 +8,9 @@ const readPackage = (pkg, context) => {
     return pkg;
 };
 
+//If you are having issues with react hooks, try uncommenting the hook below
 module.exports = {
     hooks: {
-       readPackage
+//       readPackage
     }
 };

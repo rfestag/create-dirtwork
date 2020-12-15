@@ -49,7 +49,7 @@ const components = {
     return memo(P);
   })(),
   h1: (() => {
-    const H1 = props => {console.log(props); return <Typography {...props} id={props.children} variant="h1" />}
+    const H1 = props => <Typography {...props} id={props.children} variant="h1" />;
     H1.propTypes = {
       children: PropTypes.any
     };
