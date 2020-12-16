@@ -11,5 +11,8 @@ module.exports =
   withCustomBabelConfigFile(
     withMDX({
       babelConfigFile: path.resolve("../../babel.config.json"),
+      images: {
+        domains: [] //TODO: If you are hosting images outside of the app, include domains here
+      }
     })
   )
