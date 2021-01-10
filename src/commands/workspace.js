@@ -24,6 +24,7 @@ exports.handler = async function (argv) {
   console.log(chalk.green('Finalizing configuration...'))
   const packageJson = combinePackageJson(modules)
   fs.writeFileSync('package.json', JSON.stringify(packageJson, null, '  '))
+  sh.exec(`pnpx changeset init`)
   sh.exec('git add .', {silent: true})
   sh.exec(`git commit -am "Initial commit of workspace ${name}"`, {silent: true})
   console.log(chalk.green('Done'))

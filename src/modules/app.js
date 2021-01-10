@@ -36,17 +36,22 @@ exports.packageJson = () => ({
     prettier: "prettier --write src",
     start: "next start",
     dev: "next dev",
-    test: "eslint && cross-env NODE_ENV=test jest"
+    test: "eslint && cross-env NODE_ENV=test jest --coverage"
   },
   publishConfig: {
     bin: '',
     main: 'lib/index.js',
   },
+  jest: {
+    transform: {
+      "\\.js?$": ["babel-jest", {rootMode: "upward"}]
+    }
+  },
   'lint-staged': {
     "src/**/*.{js,jsx}": [
       "eslint --fix",
       "prettier --write",
-      "cross-env NODE_ENV=test jest --bail --findRelatedTests"
+      "cross-env NODE_ENV=test jest --bail --findRelatedTests --coverage"
     ],
     "src/**/*.{md,mdx}": [
       "eslint --parser eslint-mdx --plugin mdx --fix",

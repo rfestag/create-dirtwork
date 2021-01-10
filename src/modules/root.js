@@ -20,6 +20,7 @@ exports.devDependencies = () => [
   "@babel/preset-env",
   "@babel/preset-react",
   "@babel/runtime",
+  "@changesets/cli",
   "@testing-library/jest-dom",
   "@testing-library/dom",
   "@testing-library/react",
@@ -54,6 +55,9 @@ exports.devDependencies = () => [
 ]
 
 exports.packageJson = () => ({
+  scripts: {
+    release: "echo Boom",
+  },
   husky: {
     hooks: {
       "pre-commit": "pnpm recursive exec --filter ./packages --filter ./apps -- lint-staged"

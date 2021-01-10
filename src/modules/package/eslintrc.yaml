@@ -1,0 +1,7 @@
+---
+extends:
+  - react-app
+  - prettier
+  - prettier/react
+settings:
+  errorOnUnmatchedPattern: false
