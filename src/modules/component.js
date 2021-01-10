@@ -27,7 +27,7 @@ exports.packageJson = () => ({
     build: "rollup -c",
     dev: "rollup -w -c",
     lint: "eslint --fix",
-    preinstall: "node -e \"!process.env.npm_config_user_agent.startsWith('pnpm/') && !console.log('Use \\`npx pnpm install\\` to install dependencies in this repository\\n') && process.exit(1)\"",
+    preinstall: "npx only-allow pnpm",
     prettier: "prettier --write src",
     test: "eslint && cross-env NODE_ENV=test jest --coverage"
   },

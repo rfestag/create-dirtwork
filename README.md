@@ -9,7 +9,7 @@ if you prefer, but also becuase I personally really like `pnpm`.
 
 ## Install
 
-You don't necessarily need to install dirtwork. However, if you prefer to use a locall installed version, 
+You don't necessarily need to install dirtwork. However, if you prefer to use a locally installed version, 
 you can install it initally with pnpm:
 
 ```

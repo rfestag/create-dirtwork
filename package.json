@@ -6,7 +6,7 @@
   "bin": "./src/index.js",
   "scripts": {
     "create-dirtwork": "./src/index.js",
-    "preinstall": "node -e \"!process.env.npm_config_user_agent.startsWith('pnpm/') && !console.log('Use \\`npx pnpm install\\` to install dependencies in this repository\\n') && process.exit(1)\"",
+    "preinstall": "npx only-allow pnpm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

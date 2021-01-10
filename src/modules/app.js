@@ -32,7 +32,7 @@ exports.packageJson = () => ({
   scripts: {
     build: "next build",
     lint: "eslint --fix",
-    preinstall: "node -e \"!process.env.npm_config_user_agent.startsWith('pnpm/') && !console.log('Use \\`npx pnpm install\\` to install dependencies in this repository\\n') && process.exit(1)\"",
+    preinstall: "npx only-allow pnpm",
     prettier: "prettier --write src",
     start: "next start",
     dev: "next dev",
