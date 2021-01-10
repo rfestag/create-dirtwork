@@ -12,7 +12,7 @@ if you prefer, but also becuase I personally really like `pnpm`.
 You don't necessarily need to install dirtwork. However, if you prefer to use a locall installed version, 
 you can install it initally with pnpm:
 
-``
+```
 pnpm install -g create-dirtwork
 ```
 
