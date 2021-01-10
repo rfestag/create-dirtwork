@@ -1,5 +1,11 @@
 # create-dirtwork
 
+## 0.1.3
+
+### Patch Changes
+
+- Removing the preinstall from create-dirtwork. leaving it in packages
+
 ## 0.1.2
 
 ### Patch Changes
