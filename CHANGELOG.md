@@ -1,5 +1,11 @@
 # create-dirtwork
 
+## 0.1.2
+
+### Patch Changes
+
+- Changed pre-install for all modules to follow latest pnpm standards
+
 ## 0.1.1
 
 ### Patch Changes
