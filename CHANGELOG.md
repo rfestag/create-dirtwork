@@ -1,5 +1,11 @@
 # create-dirtwork
 
+## 0.1.4
+
+### Patch Changes
+
+- Updated how Jest is configured. Specifically moved some command line arguments down to the "jest" key in the package.json. Additionally, fixed some issues with the default tests
+
 ## 0.1.3
 
 ### Patch Changes
