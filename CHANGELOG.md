@@ -1,5 +1,13 @@
 # create-dirtwork
 
+## 0.1.5
+
+### Patch Changes
+
+- Updated Roboto font dependency from deprecated version
+- Updates to documentation
+- Added scripts for changesets
+
 ## 0.1.4
 
 ### Patch Changes
