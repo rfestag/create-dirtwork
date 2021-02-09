@@ -8,8 +8,7 @@
     "create-dirtwork": "./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "changeset": "pnpx changeset",
-    "version": "pnpx changeset version && pnpm install",
-    "publish": "pnpm publish"
+    "version": "pnpx changeset version && pnpm install"
   },
   "author": "",
   "license": "ISC",
