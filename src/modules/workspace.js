@@ -18,7 +18,9 @@ exports.packageJson = () => ({
     lint: "pnpm run --parallel --stream lint",
     preinstall: "npx only-allow pnpm",
     prettier: "pnpm run --parallel --stream prettier",
-    publish: "pnpm publish",
+    changeset: "pnpx changeset",
+    version: "pnpx changeset version && pnpm install",
+    publish: "pnpm publish -r",
     start: "pnpm run --parallel --stream start",
     test: "pnpm run --parallel --stream test"
   }

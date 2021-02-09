@@ -11,9 +11,38 @@ can be a nightmare to resolve.
 
 ## Usage
 
-### Adding a new package
+### Versioning and Changesets
 
-Packages (by default) are intended to be published to NPN and re-used. You can also choose to make
+By default, we use `@changeset/cli` to manage versioning and populating the `CHANGELOG`. More details can be 
+found both on the pnpm website and the changeset documentation. However, here is the quick reference you will need
+
+The core concept that `changesets` follows is that contributors to a repository should be able to declare an
+intent to release, and that multiple intents should be able to be combined sensibly. A single `changeset` is
+an intent to release stored as data, with the information needed to combine multiple changests and coordinate
+
+#### Adding a changeset
+
+```
+pnpx changeset
+```
+
+#### Updating Versions
+
+```
+pnpx changeset version
+```
+
+#### Publishing
+
+```
+pnpm publish -r
+```
+
+### Creating/Adding projects
+
+#### Adding a new basic package
+
+Packages (by default) are intended to be published to NPM and re-used. You can also choose to make
 them private and only use them within the monorepo. 
 
 ```
@@ -26,7 +55,22 @@ or
 pnpx create-dirtwork package [name]
 ```
 
-### Creating a new package
+#### Adding a new React Component package
+
+React component packages are basically an extension of the default packages, which include
+the basic setup for a React component (or compontent library) to be published to NPM.
+
+```
+pnpm init dirtwork component [name]
+```
+
+or
+
+```
+pnpx create-dirtwork component [name]
+```
+
+#### Creating a new Web Application
 
 Apps are Next JS applications, preconfigured to use Material UI as a component library. 
 

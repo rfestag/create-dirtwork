@@ -8,7 +8,7 @@ exports.dependencies = () => [
   '@material-ui/core',
   '@material-ui/icons',
   '@material-ui/lab',
-  'fontsource-roboto',
+  '@fontsource/roboto',
   'next',
   'next-mdx-enhanced',
   'next-plugin-custom-babel-config',
