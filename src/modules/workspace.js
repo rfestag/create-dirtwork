@@ -2,7 +2,8 @@ exports.templates = () => {
   return {
     'pnpm-workspace.yaml': `${__dirname}/workspace/pnpm-workspace.yaml`,
     '.npmrc': `${__dirname}/workspace/npmrc`,
-    'README.md': `${__dirname}/workspace/README.md` 
+    'README.md': `${__dirname}/workspace/README.md`,
+    '.syncpack.json': `${__dirname}/workspace/syncpack.json`,
   }
 }
 exports.dirs = () => [
@@ -14,14 +15,15 @@ exports.packageJson = () => ({
   scripts: {
     bootstrap: "pnpm recursive install",
     build: "pnpm run --parallel --stream build",
+    changeset: "pnpx changeset",
     dev: "pnpm run --parallel --stream dev",
     lint: "pnpm run --parallel --stream lint",
     preinstall: "npx only-allow pnpm",
     prettier: "pnpm run --parallel --stream prettier",
-    changeset: "pnpx changeset",
-    version: "pnpx changeset version && pnpm install",
     publish: "pnpm publish -r",
     start: "pnpm run --parallel --stream start",
-    test: "pnpm run --parallel --stream test"
+    sync: "pnpx syncpack fix-mismatches",
+    test: "pnpm run --parallel --stream test",
+    version: "pnpx changeset version && pnpm install",
   }
 })
