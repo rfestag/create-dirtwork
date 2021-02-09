@@ -1,5 +1,11 @@
 # create-dirtwork
 
+## 0.1.6
+
+### Patch Changes
+
+- Updating babel-eslint for @babel/eslint-parser
+
 ## 0.1.5
 
 ### Patch Changes

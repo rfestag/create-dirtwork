@@ -14,6 +14,7 @@ exports.questions = ({name}) => [
 ]
 exports.devDependencies = () => [
   "@babel/core",
+  "@babel/eslint-parser@^7.12.13",
   "@babel/plugin-proposal-export-default-from",
   "@babel/plugin-syntax-dynamic-import",
   "@babel/plugin-transform-runtime",
@@ -39,7 +40,6 @@ exports.devDependencies = () => [
   "eslint-config-react-app",
   "@typescript-eslint/eslint-plugin@^4.0.0 ",
   "@typescript-eslint/parser@^4.0.0",
-  "babel-eslint@^10.0.0",
   "eslint@^7.5.0",
   "eslint-plugin-flowtype@^5.2.0",
   "eslint-plugin-import@^2.22.0",
